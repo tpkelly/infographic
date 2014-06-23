@@ -12,10 +12,13 @@
 
 -(id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame withPrimaryXAxisType:SChartAxisTypeCategory withPrimaryYAxisType:SChartAxisTypeNumber];
+    self = [super initWithFrame:frame withPrimaryXAxisType:SChartAxisTypeDateTime withPrimaryYAxisType:SChartAxisTypeNumber];
     if (self)
     {
+        self.backgroundColor = [UIColor clearColor];
         self.yAxis.title = @"Cumulative Hours";
+        self.legend.hidden = NO;
+        self.legend.position = SChartLegendPositionMiddleRight;
     }
     return self;
 }

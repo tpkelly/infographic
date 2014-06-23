@@ -15,7 +15,10 @@
     self = [super initWithFrame:frame withPrimaryXAxisType:SChartAxisTypeCategory withPrimaryYAxisType:SChartAxisTypeNumber];
     if (self)
     {
-        
+        self.backgroundColor = [UIColor clearColor];
+        self.legend.hidden = NO;
+        self.title = @"Breakdown of Language experience by Workplace";
+        self.titleCentresOn = SChartTitleCentresOnChart;
     }
     return self;
 }
