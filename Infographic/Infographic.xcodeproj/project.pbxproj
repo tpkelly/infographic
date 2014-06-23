@@ -13,6 +13,7 @@
 		47B1043E19581881002C66FF /* CumulativeChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B1043D19581881002C66FF /* CumulativeChart.m */; };
 		47B104411958188F002C66FF /* StackedChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B104401958188F002C66FF /* StackedChart.m */; };
 		47B1044319581F91002C66FF /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B1044219581F91002C66FF /* libc++.dylib */; };
+		47B1044E1958579A002C66FF /* GradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B1044D1958579A002C66FF /* GradientLayer.m */; };
 		47D68CB61958162A00A3C8F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D68CB51958162A00A3C8F5 /* Foundation.framework */; };
 		47D68CB81958162A00A3C8F5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D68CB71958162A00A3C8F5 /* CoreGraphics.framework */; };
 		47D68CBA1958162A00A3C8F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D68CB91958162A00A3C8F5 /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 		47B1043F1958188F002C66FF /* StackedChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackedChart.h; sourceTree = "<group>"; };
 		47B104401958188F002C66FF /* StackedChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackedChart.m; sourceTree = "<group>"; };
 		47B1044219581F91002C66FF /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		47B1044C1958579A002C66FF /* GradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientLayer.h; sourceTree = "<group>"; };
+		47B1044D1958579A002C66FF /* GradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientLayer.m; sourceTree = "<group>"; };
 		47D68CB21958162A00A3C8F5 /* Infographic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Infographic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D68CB51958162A00A3C8F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		47D68CB71958162A00A3C8F5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,6 +92,15 @@
 			path = Charts;
 			sourceTree = "<group>";
 		};
+		47B1044819585763002C66FF /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				47B1044C1958579A002C66FF /* GradientLayer.h */,
+				47B1044D1958579A002C66FF /* GradientLayer.m */,
+			);
+			path = Layers;
+			sourceTree = "<group>";
+		};
 		47D68CA91958162A00A3C8F5 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +133,7 @@
 		47D68CBB1958162A00A3C8F5 /* Infographic */ = {
 			isa = PBXGroup;
 			children = (
+				47B1044819585763002C66FF /* Layers */,
 				47B10433195817B5002C66FF /* Charts */,
 				47B10432195817AE002C66FF /* Datasources */,
 				47D68CC41958162A00A3C8F5 /* AppDelegate.h */,
@@ -215,6 +228,7 @@
 				47B1043B19581865002C66FF /* StackedDatasource.m in Sources */,
 				47B1043E19581881002C66FF /* CumulativeChart.m in Sources */,
 				47D68CC21958162A00A3C8F5 /* main.m in Sources */,
+				47B1044E1958579A002C66FF /* GradientLayer.m in Sources */,
 				47B104411958188F002C66FF /* StackedChart.m in Sources */,
 				47B104381958182C002C66FF /* CumulativeDatasource.m in Sources */,
 			);

@@ -13,6 +13,8 @@
 #import "StackedChart.h"
 #import "StackedDatasource.h"
 
+#import "GradientLayer.h"
+
 @interface ViewController ()
 
 @property (nonatomic, strong) CumulativeDatasource *cumulativeDatasource;
@@ -24,6 +26,8 @@
 
 -(void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     //Set up Cumulative chart
     CumulativeChart *cumulativeChart = [[CumulativeChart alloc] initWithFrame:CGRectMake(10, 10, 600, 400)];
     self.cumulativeDatasource = [CumulativeDatasource new];
@@ -37,6 +41,11 @@
     [self.scrollview addSubview:stackedChart];
     
     self.scrollview.contentSize = CGSizeMake(CGRectGetMaxX(self.view.bounds), CGRectGetMaxY(stackedChart.frame));
+    
+    //Add gradient
+    CALayer *gradient = [GradientLayer new];
+    gradient.frame = self.scrollview.bounds;
+    [self.view.layer insertSublayer:gradient atIndex:0];
 }
 
 @end
