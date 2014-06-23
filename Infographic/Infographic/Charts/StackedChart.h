@@ -1,17 +1,13 @@
 //
-//  ViewController.m
+//  StackedChart.h
 //  Infographic
 //
 //  Created by Thomas Kelly on 23/06/2014.
 //  Copyright (c) 2014 Scott Logic. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <ShinobiCharts/ShinobiChart.h>
 
-@interface ViewController ()
-
-@end
-
-@implementation ViewController
+@interface StackedChart : ShinobiChart
 
 @end

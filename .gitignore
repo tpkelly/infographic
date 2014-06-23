@@ -7,5 +7,7 @@
 # Pods/
 
 xcuserdata
+*.xccheckout
+
 ShinobiCharts.framework
 

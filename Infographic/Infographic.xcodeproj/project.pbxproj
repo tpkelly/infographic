@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47B10431195817A5002C66FF /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B10430195817A5002C66FF /* ShinobiCharts.framework */; };
+		47B104381958182C002C66FF /* CumulativeDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B104371958182C002C66FF /* CumulativeDatasource.m */; };
+		47B1043B19581865002C66FF /* StackedDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B1043A19581865002C66FF /* StackedDatasource.m */; };
+		47B1043E19581881002C66FF /* CumulativeChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B1043D19581881002C66FF /* CumulativeChart.m */; };
+		47B104411958188F002C66FF /* StackedChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B104401958188F002C66FF /* StackedChart.m */; };
 		47D68CB61958162A00A3C8F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D68CB51958162A00A3C8F5 /* Foundation.framework */; };
 		47D68CB81958162A00A3C8F5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D68CB71958162A00A3C8F5 /* CoreGraphics.framework */; };
 		47D68CBA1958162A00A3C8F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D68CB91958162A00A3C8F5 /* UIKit.framework */; };
@@ -19,6 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47B10430195817A5002C66FF /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiCharts.framework; path = Library/Frameworks/ShinobiCharts.framework; sourceTree = DEVELOPER_DIR; };
+		47B10434195817E3002C66FF /* CumulativeDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CumulativeDatasource.h; sourceTree = "<group>"; };
+		47B104371958182C002C66FF /* CumulativeDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CumulativeDatasource.m; sourceTree = "<group>"; };
+		47B1043919581865002C66FF /* StackedDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackedDatasource.h; sourceTree = "<group>"; };
+		47B1043A19581865002C66FF /* StackedDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackedDatasource.m; sourceTree = "<group>"; };
+		47B1043C19581881002C66FF /* CumulativeChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CumulativeChart.h; sourceTree = "<group>"; };
+		47B1043D19581881002C66FF /* CumulativeChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CumulativeChart.m; sourceTree = "<group>"; };
+		47B1043F1958188F002C66FF /* StackedChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackedChart.h; sourceTree = "<group>"; };
+		47B104401958188F002C66FF /* StackedChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackedChart.m; sourceTree = "<group>"; };
 		47D68CB21958162A00A3C8F5 /* Infographic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Infographic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D68CB51958162A00A3C8F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		47D68CB71958162A00A3C8F5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -40,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B10431195817A5002C66FF /* ShinobiCharts.framework in Frameworks */,
 				47D68CB81958162A00A3C8F5 /* CoreGraphics.framework in Frameworks */,
 				47D68CBA1958162A00A3C8F5 /* UIKit.framework in Frameworks */,
 				47D68CB61958162A00A3C8F5 /* Foundation.framework in Frameworks */,
@@ -49,6 +64,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47B10432195817AE002C66FF /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				47B10434195817E3002C66FF /* CumulativeDatasource.h */,
+				47B104371958182C002C66FF /* CumulativeDatasource.m */,
+				47B1043919581865002C66FF /* StackedDatasource.h */,
+				47B1043A19581865002C66FF /* StackedDatasource.m */,
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
+		47B10433195817B5002C66FF /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				47B1043C19581881002C66FF /* CumulativeChart.h */,
+				47B1043D19581881002C66FF /* CumulativeChart.m */,
+				47B1043F1958188F002C66FF /* StackedChart.h */,
+				47B104401958188F002C66FF /* StackedChart.m */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
 		47D68CA91958162A00A3C8F5 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +106,7 @@
 		47D68CB41958162A00A3C8F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47B10430195817A5002C66FF /* ShinobiCharts.framework */,
 				47D68CB51958162A00A3C8F5 /* Foundation.framework */,
 				47D68CB71958162A00A3C8F5 /* CoreGraphics.framework */,
 				47D68CB91958162A00A3C8F5 /* UIKit.framework */,
@@ -79,6 +117,8 @@
 		47D68CBB1958162A00A3C8F5 /* Infographic */ = {
 			isa = PBXGroup;
 			children = (
+				47B10433195817B5002C66FF /* Charts */,
+				47B10432195817AE002C66FF /* Datasources */,
 				47D68CC41958162A00A3C8F5 /* AppDelegate.h */,
 				47D68CC51958162A00A3C8F5 /* AppDelegate.m */,
 				47D68CC71958162A00A3C8F5 /* Main.storyboard */,
@@ -168,7 +208,11 @@
 			files = (
 				47D68CCC1958162A00A3C8F5 /* ViewController.m in Sources */,
 				47D68CC61958162A00A3C8F5 /* AppDelegate.m in Sources */,
+				47B1043B19581865002C66FF /* StackedDatasource.m in Sources */,
+				47B1043E19581881002C66FF /* CumulativeChart.m in Sources */,
 				47D68CC21958162A00A3C8F5 /* main.m in Sources */,
+				47B104411958188F002C66FF /* StackedChart.m in Sources */,
+				47B104381958182C002C66FF /* CumulativeDatasource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +316,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Infographic/Infographic-Prefix.pch";
 				INFOPLIST_FILE = "Infographic/Infographic-Info.plist";
@@ -286,6 +334,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Infographic/Infographic-Prefix.pch";
 				INFOPLIST_FILE = "Infographic/Infographic-Info.plist";
