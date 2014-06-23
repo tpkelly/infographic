@@ -10,5 +10,14 @@
 
 @implementation CumulativeChart
 
+-(id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame withPrimaryXAxisType:SChartAxisTypeCategory withPrimaryYAxisType:SChartAxisTypeNumber];
+    if (self)
+    {
+        self.yAxis.title = @"Cumulative Hours";
+    }
+    return self;
+}
 
 @end

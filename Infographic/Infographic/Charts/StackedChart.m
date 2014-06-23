@@ -10,4 +10,14 @@
 
 @implementation StackedChart
 
+-(id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame withPrimaryXAxisType:SChartAxisTypeCategory withPrimaryYAxisType:SChartAxisTypeNumber];
+    if (self)
+    {
+        
+    }
+    return self;
+}
+
 @end

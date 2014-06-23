@@ -12,6 +12,7 @@
 		47B1043B19581865002C66FF /* StackedDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B1043A19581865002C66FF /* StackedDatasource.m */; };
 		47B1043E19581881002C66FF /* CumulativeChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B1043D19581881002C66FF /* CumulativeChart.m */; };
 		47B104411958188F002C66FF /* StackedChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B104401958188F002C66FF /* StackedChart.m */; };
+		47B1044319581F91002C66FF /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B1044219581F91002C66FF /* libc++.dylib */; };
 		47D68CB61958162A00A3C8F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D68CB51958162A00A3C8F5 /* Foundation.framework */; };
 		47D68CB81958162A00A3C8F5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D68CB71958162A00A3C8F5 /* CoreGraphics.framework */; };
 		47D68CBA1958162A00A3C8F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D68CB91958162A00A3C8F5 /* UIKit.framework */; };
@@ -33,6 +34,7 @@
 		47B1043D19581881002C66FF /* CumulativeChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CumulativeChart.m; sourceTree = "<group>"; };
 		47B1043F1958188F002C66FF /* StackedChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackedChart.h; sourceTree = "<group>"; };
 		47B104401958188F002C66FF /* StackedChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackedChart.m; sourceTree = "<group>"; };
+		47B1044219581F91002C66FF /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		47D68CB21958162A00A3C8F5 /* Infographic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Infographic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D68CB51958162A00A3C8F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		47D68CB71958162A00A3C8F5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B1044319581F91002C66FF /* libc++.dylib in Frameworks */,
 				47B10431195817A5002C66FF /* ShinobiCharts.framework in Frameworks */,
 				47D68CB81958162A00A3C8F5 /* CoreGraphics.framework in Frameworks */,
 				47D68CBA1958162A00A3C8F5 /* UIKit.framework in Frameworks */,
@@ -106,6 +109,7 @@
 		47D68CB41958162A00A3C8F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47B1044219581F91002C66FF /* libc++.dylib */,
 				47B10430195817A5002C66FF /* ShinobiCharts.framework */,
 				47D68CB51958162A00A3C8F5 /* Foundation.framework */,
 				47D68CB71958162A00A3C8F5 /* CoreGraphics.framework */,
