@@ -15,8 +15,8 @@
     self = [super init];
     if (self)
     {
-        self.colors = @[(id)([UIColor colorWithWhite:0.7 alpha:1].CGColor),
-                        (id)([UIColor colorWithWhite:0.9 alpha:1].CGColor)];
+        self.colors = @[(id)([UIColor colorWithWhite:0.8 alpha:1].CGColor),
+                        (id)([UIColor colorWithWhite:1 alpha:1].CGColor)];
         self.startPoint = CGPointMake(0, 0.5);
         self.endPoint = CGPointMake(1, 0.5);
     }

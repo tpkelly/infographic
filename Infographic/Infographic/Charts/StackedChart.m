@@ -16,6 +16,7 @@
     if (self)
     {
         self.backgroundColor = [UIColor clearColor];
+        self.plotAreaBackgroundColor = [UIColor clearColor];
         self.legend.hidden = NO;
         self.title = @"Breakdown of Language experience by Workplace";
         self.titleCentresOn = SChartTitleCentresOnChart;

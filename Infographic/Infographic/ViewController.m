@@ -29,25 +29,53 @@
     [super viewDidLoad];
     
     self.titleLabel.text = @"Test my title";
-    
-    //Set up Cumulative chart
-    CumulativeChart *cumulativeChart = [[CumulativeChart alloc] initWithFrame:CGRectMake(10, 10, 600, 400)];
-    self.cumulativeDatasource = [CumulativeDatasource new];
-    cumulativeChart.datasource = self.cumulativeDatasource;
-    [self.scrollview addSubview:cumulativeChart];
-    
-    //Set up Stacked chart
-    StackedChart *stackedChart = [[StackedChart alloc] initWithFrame:CGRectMake(400, 500, 600, 400)];
-    self.stackedDatasource = [StackedDatasource new];
-    stackedChart.datasource = self.stackedDatasource;
-    [self.scrollview addSubview:stackedChart];
-    
-    self.scrollview.contentSize = CGSizeMake(CGRectGetMaxX(self.view.bounds), CGRectGetMaxY(stackedChart.frame));
+
+    [self addCumulativeChart];
+    [self addDivider];
+    [self addStackedChart];
     
     //Add gradient
     CALayer *gradient = [GradientLayer new];
     gradient.frame = CGRectMake(0, 0, 1024, 768);
-    [self.view.layer insertSublayer:gradient atIndex:0];
+    //[self.view.layer insertSublayer:gradient atIndex:0];
+}
+
+-(void)addDivider
+{
+    CGFloat boundWidth = 1024;
+    CGFloat dividerPadding = 50;
+    UIView *divider = [[UIView alloc] initWithFrame:CGRectMake(boundWidth * 0.15, self.scrollview.contentSize.height + dividerPadding, boundWidth * 0.7, 1)];
+    divider.backgroundColor = [UIColor blackColor];
+    [self.scrollview addSubview:divider];
+
+    //Resize to be closely fitting
+    self.scrollview.contentSize = CGSizeMake(CGRectGetMaxX(self.view.bounds), CGRectGetMaxY(divider.frame) + dividerPadding);
+}
+
+-(void)addCumulativeChart
+{
+    //Set up Cumulative chart
+    CumulativeChart *cumulativeChart = [[CumulativeChart alloc] initWithFrame:CGRectMake(10, self.scrollview.contentSize.height + 10, 600, 400)];
+    cumulativeChart.userInteractionEnabled = NO;
+    self.cumulativeDatasource = [CumulativeDatasource new];
+    cumulativeChart.datasource = self.cumulativeDatasource;
+    [self.scrollview addSubview:cumulativeChart];
+    
+    //Resize to be closely fitting
+    self.scrollview.contentSize = CGSizeMake(CGRectGetMaxX(self.view.bounds), CGRectGetMaxY(cumulativeChart.frame));
+}
+
+-(void)addStackedChart
+{
+    //Set up Cumulative chart
+    StackedChart *stackedChart = [[StackedChart alloc] initWithFrame:CGRectMake(400, self.scrollview.contentSize.height + 10, 600, 400)];
+    stackedChart.userInteractionEnabled = NO;
+    self.stackedDatasource = [StackedDatasource new];
+    stackedChart.datasource = self.stackedDatasource;
+    [self.scrollview addSubview:stackedChart];
+    
+    //Resize to be closely fitting
+    self.scrollview.contentSize = CGSizeMake(CGRectGetMaxX(self.view.bounds), CGRectGetMaxY(stackedChart.frame));
 }
 
 @end

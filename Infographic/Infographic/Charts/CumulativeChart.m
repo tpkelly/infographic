@@ -16,6 +16,7 @@
     if (self)
     {
         self.backgroundColor = [UIColor clearColor];
+        self.plotAreaBackgroundColor = [UIColor clearColor];
         self.yAxis.title = @"Cumulative Hours";
         self.legend.hidden = NO;
         self.legend.position = SChartLegendPositionMiddleRight;
