@@ -32,6 +32,8 @@
 
     [self addCumulativeChart];
     [self addDivider];
+    [self addSplitSection];
+    [self addDivider];
     [self addStackedChart];
     
     //Add gradient
@@ -44,8 +46,8 @@
 {
     CGFloat boundWidth = 1024;
     CGFloat dividerPadding = 50;
-    UIView *divider = [[UIView alloc] initWithFrame:CGRectMake(boundWidth * 0.15, self.scrollview.contentSize.height + dividerPadding, boundWidth * 0.7, 1)];
-    divider.backgroundColor = [UIColor blackColor];
+    UIView *divider = [[UIView alloc] initWithFrame:CGRectMake(boundWidth * 0.35, self.scrollview.contentSize.height + dividerPadding, boundWidth * 0.3, 1)];
+    divider.backgroundColor = [UIColor lightGrayColor];
     [self.scrollview addSubview:divider];
 
     //Resize to be closely fitting
@@ -76,6 +78,40 @@
     
     //Resize to be closely fitting
     self.scrollview.contentSize = CGSizeMake(CGRectGetMaxX(self.view.bounds), CGRectGetMaxY(cumulativeChart.frame));
+}
+
+-(void)addSplitSection
+{
+    UIView *vertical = [[UIView alloc] initWithFrame:CGRectMake(512, self.scrollview.contentSize.height + 10, 1, 300)];
+    vertical.backgroundColor = [UIColor lightGrayColor];
+    [self.scrollview addSubview:vertical];
+    
+    //Add left title
+    UILabel *leftTitle = [UILabel new];
+    leftTitle.font = [UIFont fontWithName:@"HelveticaNeue" size:24];
+    leftTitle.text = @"Left Title";
+    [leftTitle sizeToFit];
+    leftTitle.center = CGPointMake(256, CGRectGetMinY(vertical.frame));
+    [self.scrollview addSubview:leftTitle];
+    
+    //Add left text
+    UITextView *leftText = [[UITextView alloc] initWithFrame:CGRectMake(50, self.scrollview.contentSize.height + 75, 412, 200)];
+    [self.scrollview addSubview:leftText];
+    
+    //Add right title
+    UILabel *rightTitle = [UILabel new];
+    rightTitle.font = [UIFont fontWithName:@"HelveticaNeue" size:24];
+    rightTitle.text = @"Right Title";
+    [rightTitle sizeToFit];
+    rightTitle.center = CGPointMake(768, CGRectGetMinY(vertical.frame));
+    [self.scrollview addSubview:rightTitle];
+    
+    //Add right text
+    UITextView *rightText = [[UITextView alloc] initWithFrame:CGRectMake(572, self.scrollview.contentSize.height + 75, 412, 200)];
+    [self.scrollview addSubview:rightText];
+    
+    //Resize to be closely fitting
+    self.scrollview.contentSize = CGSizeMake(CGRectGetMaxX(self.view.bounds), CGRectGetMaxY(vertical.frame));
 }
 
 -(void)addStackedChart
