@@ -11,5 +11,6 @@
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollview;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

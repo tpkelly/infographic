@@ -28,6 +28,8 @@
 {
     [super viewDidLoad];
     
+    self.titleLabel.text = @"Test my title";
+    
     //Set up Cumulative chart
     CumulativeChart *cumulativeChart = [[CumulativeChart alloc] initWithFrame:CGRectMake(10, 10, 600, 400)];
     self.cumulativeDatasource = [CumulativeDatasource new];
@@ -44,7 +46,7 @@
     
     //Add gradient
     CALayer *gradient = [GradientLayer new];
-    gradient.frame = self.scrollview.bounds;
+    gradient.frame = CGRectMake(0, 0, 1024, 768);
     [self.view.layer insertSublayer:gradient atIndex:0];
 }
 
