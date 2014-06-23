@@ -55,11 +55,24 @@
 -(void)addCumulativeChart
 {
     //Set up Cumulative chart
-    CumulativeChart *cumulativeChart = [[CumulativeChart alloc] initWithFrame:CGRectMake(10, self.scrollview.contentSize.height + 10, 600, 400)];
+    CumulativeChart *cumulativeChart = [[CumulativeChart alloc] initWithFrame:CGRectMake(10, self.scrollview.contentSize.height + 10, 700, 400)];
     cumulativeChart.userInteractionEnabled = NO;
     self.cumulativeDatasource = [CumulativeDatasource new];
     cumulativeChart.datasource = self.cumulativeDatasource;
     [self.scrollview addSubview:cumulativeChart];
+    
+    //Add describing textview
+    UITextView *cumulativeText = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
+    cumulativeText.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
+    cumulativeText.text = @"\u2022 Over 13000 hours of software experience\n"
+                           "   over 10 years.\n"
+                           "\u2022 3 years of industry experience.\n"
+                           "\u2022 Find some better things to say";
+    [cumulativeText sizeToFit];
+    cumulativeText.center = CGPointMake(670, CGRectGetMidY(cumulativeChart.frame));
+    //Round all values
+    cumulativeText.frame = CGRectIntegral(cumulativeText.frame);
+    [self.scrollview addSubview:cumulativeText];
     
     //Resize to be closely fitting
     self.scrollview.contentSize = CGSizeMake(CGRectGetMaxX(self.view.bounds), CGRectGetMaxY(cumulativeChart.frame));

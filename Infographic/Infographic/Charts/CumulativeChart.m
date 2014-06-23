@@ -19,7 +19,7 @@
         self.plotAreaBackgroundColor = [UIColor clearColor];
         self.yAxis.title = @"Cumulative Hours";
         self.legend.hidden = NO;
-        self.legend.position = SChartLegendPositionMiddleRight;
+        self.xAxis.majorTickFrequency = [SChartDateFrequency dateFrequencyWithYear:1];
     }
     return self;
 }
