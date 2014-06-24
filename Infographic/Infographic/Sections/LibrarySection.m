@@ -26,14 +26,14 @@
                            [[LinkedBook alloc] initWithImagePath:@"Images/HeadfirstDesign.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0596007124/"],
                            [[LinkedBook alloc] initWithImagePath:@"Images/ShowMeTheNumbers.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0970601972/"]
                            ];
-        CGFloat xPosition = 10;
+        CGFloat xPosition = 102;
         CGFloat yPosition = 10;
         for (UIView *book in books)
         {
             if (xPosition + CGRectGetWidth(book.frame) > self.bounds.size.width)
             {
                 yPosition += CGRectGetHeight(book.frame) + 30;
-                xPosition = 110;
+                xPosition = 102;
             }
             
             book.layer.borderWidth = 1;
