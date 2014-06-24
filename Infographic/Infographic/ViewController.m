@@ -67,15 +67,12 @@
     [self.scrollview addSubview:cumulativeChart];
     
     //Add describing textview
-    UITextView *cumulativeText = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 400, 150)];
+    UITextView *cumulativeText = [[UITextView alloc] initWithFrame:CGRectMake(600, self.scrollview.contentSize.height + 150, 400, 150)];
     cumulativeText.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
     cumulativeText.text = @"For the past 10 years, I have worked for over 13,000 hours at software development, with 3 years of real industry experience. "
 	                       "I have experienced many methodologies and processes outside of day-to-day coding, "
 						   "particularly Agile Development, Design Patterns and User Experience (UX). Aside from coding, "
 						   "I have continued to expand my knowledge through books and blogs, as in the 'Library' section below.";
-    cumulativeText.center = CGPointMake(800, self.scrollview.contentSize.height + 300);
-    //Round all values
-    cumulativeText.frame = CGRectIntegral(cumulativeText.frame);
     [self.scrollview addSubview:cumulativeText];
     
     //Resize to be closely fitting
@@ -132,6 +129,14 @@
     self.stackedDatasource = [StackedDatasource new];
     stackedChart.datasource = self.stackedDatasource;
     [self.scrollview addSubview:stackedChart];
+    
+    //Add describing textview
+    UITextView *stackedText = [[UITextView alloc] initWithFrame:CGRectMake(50, self.scrollview.contentSize.height + 125, 350, 200)];
+    stackedText.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
+    stackedText.text = @"The past decade has given me a wide range of experience across many different languages.\n\n"
+                        "This primarily focused on Objective-C and Java, but includes other languages (grey columns) such as:\n"
+                        "\u2022 Python\n\u2022 Ruby\n\u2022 Pascal\n\u2022 PHP\n\u2022 HTML5\n\u2022 Assembly";
+    [self.scrollview addSubview:stackedText];
     
     //Resize to be closely fitting
     self.scrollview.contentSize = CGSizeMake(CGRectGetMaxX(self.view.bounds), CGRectGetMaxY(stackedChart.frame));
