@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		477F03E319597F08004A5A15 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 477F03E219597F08004A5A15 /* Images */; };
 		477F03E719597FC7004A5A15 /* CaptionedBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 477F03E619597FC7004A5A15 /* CaptionedBubble.m */; };
+		477F03ED1959AB37004A5A15 /* LinkedBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 477F03EC1959AB37004A5A15 /* LinkedBook.m */; };
 		47B10431195817A5002C66FF /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B10430195817A5002C66FF /* ShinobiCharts.framework */; };
 		47B104381958182C002C66FF /* CumulativeDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B104371958182C002C66FF /* CumulativeDatasource.m */; };
 		47B1043B19581865002C66FF /* StackedDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B1043A19581865002C66FF /* StackedDatasource.m */; };
@@ -31,6 +32,8 @@
 		477F03E219597F08004A5A15 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		477F03E519597FC7004A5A15 /* CaptionedBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptionedBubble.h; sourceTree = "<group>"; };
 		477F03E619597FC7004A5A15 /* CaptionedBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptionedBubble.m; sourceTree = "<group>"; };
+		477F03EB1959AB37004A5A15 /* LinkedBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedBook.h; sourceTree = "<group>"; };
+		477F03EC1959AB37004A5A15 /* LinkedBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedBook.m; sourceTree = "<group>"; };
 		47B10430195817A5002C66FF /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiCharts.framework; path = Library/Frameworks/ShinobiCharts.framework; sourceTree = DEVELOPER_DIR; };
 		47B10434195817E3002C66FF /* CumulativeDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CumulativeDatasource.h; sourceTree = "<group>"; };
 		47B104371958182C002C66FF /* CumulativeDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CumulativeDatasource.m; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 			children = (
 				477F03E519597FC7004A5A15 /* CaptionedBubble.h */,
 				477F03E619597FC7004A5A15 /* CaptionedBubble.m */,
+				477F03EB1959AB37004A5A15 /* LinkedBook.h */,
+				477F03EC1959AB37004A5A15 /* LinkedBook.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 				47B1043E19581881002C66FF /* CumulativeChart.m in Sources */,
 				47D68CC21958162A00A3C8F5 /* main.m in Sources */,
 				47B1044E1958579A002C66FF /* GradientLayer.m in Sources */,
+				477F03ED1959AB37004A5A15 /* LinkedBook.m in Sources */,
 				47B104411958188F002C66FF /* StackedChart.m in Sources */,
 				47B104381958182C002C66FF /* CumulativeDatasource.m in Sources */,
 			);

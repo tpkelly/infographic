@@ -13,6 +13,7 @@
 #import "StackedChart.h"
 #import "StackedDatasource.h"
 #import "CaptionedBubble.h"
+#import "LinkedBook.h"
 
 #import "GradientLayer.h"
 
@@ -36,6 +37,8 @@
     [self addSplitSection];
     [self addDivider];
     [self addStackedChart];
+    [self addDivider];
+    [self addLibrary];
     [self addDivider];
     [self addContributionBubbles];
     
@@ -140,6 +143,30 @@
     
     //Resize to be closely fitting
     self.scrollview.contentSize = CGSizeMake(CGRectGetMaxX(self.view.bounds), CGRectGetMaxY(stackedChart.frame));
+}
+
+-(void)addLibrary
+{
+    NSArray *books = @[[[LinkedBook alloc] initWithImagePath:@"Images/MythicalManMonth.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0201835959/"],
+                       [[LinkedBook alloc] initWithImagePath:@"Images/Peopleware.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0932633056/"],
+                       [[LinkedBook alloc] initWithImagePath:@"Images/PragmaticProgrammer.jpg" amazonURL:@"http://www.amazon.co.uk/dp/020161622X/"],
+                       [[LinkedBook alloc] initWithImagePath:@"Images/DesignOfEverydayThings.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0262525674/"],
+                       [[LinkedBook alloc] initWithImagePath:@"Images/LeanUX.jpg" amazonURL:@"http://www.amazon.co.uk/dp/1449311652/"],
+                       [[LinkedBook alloc] initWithImagePath:@"Images/EvilByDesign.jpg" amazonURL:@"http://www.amazon.co.uk/dp/1118422147/"],
+                       [[LinkedBook alloc] initWithImagePath:@"Images/97Things.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0596809484/"],
+                       [[LinkedBook alloc] initWithImagePath:@"Images/DesignPatterns.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0201633612/"],
+                       [[LinkedBook alloc] initWithImagePath:@"Images/HeadfirstDesign.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0596007124/"]];
+    CGFloat xPosition = 200;
+    for (UIView *book in books)
+    {
+        book.center = CGPointMake(xPosition, self.scrollview.contentSize.height + 180);
+        xPosition += 170;
+        [self.scrollview addSubview:book];
+    }
+    
+    
+    //Resize to be closely fitting
+    self.scrollview.contentSize = CGSizeMake(CGRectGetMaxX(self.view.bounds), self.scrollview.contentSize.height + 160);
 }
 
 -(void)addContributionBubbles
