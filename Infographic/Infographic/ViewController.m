@@ -12,6 +12,7 @@
 #import "CumulativeDatasource.h"
 #import "StackedChart.h"
 #import "StackedDatasource.h"
+#import "CaptionedBubble.h"
 
 #import "GradientLayer.h"
 
@@ -35,6 +36,8 @@
     [self addSplitSection];
     [self addDivider];
     [self addStackedChart];
+    [self addDivider];
+    [self addContributionBubbles];
     
     //Add gradient
     CALayer *gradient = [GradientLayer new];
@@ -64,14 +67,13 @@
     [self.scrollview addSubview:cumulativeChart];
     
     //Add describing textview
-    UITextView *cumulativeText = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
+    UITextView *cumulativeText = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 400, 150)];
     cumulativeText.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
-    cumulativeText.text = @"For the past 10 years, I have worked for over 13,000 hours at software development, with 3 years of real industry experience."
-	                       "I have experienced many methodologies and processes outside of day-to-day coding,"
-						   "particularly Agile Development, Design Patterns and User Experience (UX). Aside from coding,"
-						   "I have expanded my knowledge through books and blogs, as seen in the 'Library' section below.";
-    [cumulativeText sizeToFit];
-    cumulativeText.center = CGPointMake(670, CGRectGetMidY(cumulativeChart.frame));
+    cumulativeText.text = @"For the past 10 years, I have worked for over 13,000 hours at software development, with 3 years of real industry experience. "
+	                       "I have experienced many methodologies and processes outside of day-to-day coding, "
+						   "particularly Agile Development, Design Patterns and User Experience (UX). Aside from coding, "
+						   "I have continued to expand my knowledge through books and blogs, as in the 'Library' section below.";
+    cumulativeText.center = CGPointMake(800, self.scrollview.contentSize.height + 300);
     //Round all values
     cumulativeText.frame = CGRectIntegral(cumulativeText.frame);
     [self.scrollview addSubview:cumulativeText];
@@ -89,13 +91,14 @@
     //Add left title
     UILabel *leftTitle = [UILabel new];
     leftTitle.font = [UIFont fontWithName:@"HelveticaNeue" size:24];
-    leftTitle.text = @"ScottLogic/ShinobiControls";
+    leftTitle.text = @"ScottLogic / ShinobiControls";
     [leftTitle sizeToFit];
     leftTitle.center = CGPointMake(256, CGRectGetMinY(vertical.frame));
     [self.scrollview addSubview:leftTitle];
     
     //Add left text
-    UITextView *leftText = [[UITextView alloc] initWithFrame:CGRectMake(50, self.scrollview.contentSize.height + 75, 412, 200)];
+    UITextView *leftText = [[UITextView alloc] initWithFrame:CGRectMake(50, self.scrollview.contentSize.height + 75, 462, 200)];
+    leftText.font = [UIFont fontWithName:@"HelveticaNeue" size:16];
 	leftText.text = @"\u2022 iOS component development across entire product range.\n"
 	                 "\u2022 (Unofficial) UX expert amongst development team.\n"
 	                 "\u2022 Social media manager.\n"
@@ -104,7 +107,7 @@
 	                 "\u2022 Continual presence on the office library book orders.\n"
 	                 "\u2022 Blogger.\n"
 	                 "\u2022 Maintainer of the Continuous Integration server.\n"
-	                 "\u2022 Participant in numerous study groups."
+	                 "\u2022 Participant in numerous study groups.";
     [self.scrollview addSubview:leftText];
     
     //Add right title
@@ -117,9 +120,10 @@
     
     //Add right text
     UITextView *rightText = [[UITextView alloc] initWithFrame:CGRectMake(572, self.scrollview.contentSize.height + 75, 412, 200)];
+    rightText.font = [UIFont fontWithName:@"HelveticaNeue" size:16];
 	rightText.text = @"\u2022 Client-side development of integrated device software.\n"
 	                  "\u2022 Development of device drivers and features.\n"
-					  "\u2022 Server-side development of radio services."
+					  "\u2022 Server-side development of radio services.";
     [self.scrollview addSubview:rightText];
     
     //Resize to be closely fitting
@@ -137,6 +141,27 @@
     
     //Resize to be closely fitting
     self.scrollview.contentSize = CGSizeMake(CGRectGetMaxX(self.view.bounds), CGRectGetMaxY(stackedChart.frame));
+}
+
+-(void)addContributionBubbles
+{
+    //Add twitter button
+    UIView *twitterBubble = [CaptionedBubble bubbleWithImagePath:@"Images/Twitter.png" caption:@"500+ social media posts"];
+    twitterBubble.center = CGPointMake(256, self.scrollview.contentSize.height + 130);
+    [self.scrollview addSubview:twitterBubble];
+    
+    //Add twitter button
+    UIView *forumBubble = [CaptionedBubble bubbleWithImagePath:@"Images/ForumPosts.png" caption:@"100+ forum posts"];
+    forumBubble.center = CGPointMake(512, self.scrollview.contentSize.height + 130);
+    [self.scrollview addSubview:forumBubble];
+    
+    //Add twitter button
+    UIView *blogBubble = [CaptionedBubble bubbleWithImagePath:@"Images/Blogs.png" caption:@"5 tutorial blog posts"];
+    blogBubble.center = CGPointMake(768, self.scrollview.contentSize.height + 130);
+    [self.scrollview addSubview:blogBubble];
+    
+    //Resize to be closely fitting
+    self.scrollview.contentSize = CGSizeMake(CGRectGetMaxX(self.view.bounds), CGRectGetMaxY(blogBubble.frame));
 }
 
 @end
