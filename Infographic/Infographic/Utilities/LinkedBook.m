@@ -26,7 +26,7 @@
         UIImage *bookImage = [UIImage imageNamed:imagePath];
         UIButton *bookButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [bookButton setBackgroundImage:bookImage forState:UIControlStateNormal];
-        bookButton.bounds = self.bounds;
+        bookButton.frame = self.bounds;
         [bookButton addTarget:self action:@selector(openLink) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:bookButton];
     }
