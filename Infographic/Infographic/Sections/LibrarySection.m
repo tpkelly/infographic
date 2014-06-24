@@ -13,7 +13,7 @@
 
 - (id)init
 {
-    self = [super initWithFrame:CGRectMake(0, 0, 1024, 750)];
+    self = [super initWithFrame:CGRectMake(0, 0, 1024, 550)];
     if (self) {
         
         //Library title
@@ -28,7 +28,8 @@
         UITextView *libraryDescription = [[UITextView alloc] initWithFrame:CGRectMake(10, 110, 280, 500)];
         libraryDescription.backgroundColor = [UIColor clearColor];
         libraryDescription.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
-        libraryDescription.text = @"My personal library of books";
+        libraryDescription.text = @"During my time at Reciva and ShinobiControls, I have built up a sizable reading list. These books are a selection of some I have read and recommended to others.\n\n"
+		                           "In particular, books about User Experience (UX), Agile Development, and Project Management feature heavily.";
         [self addSubview:libraryDescription];
         
         //Add the book images, with links
@@ -40,8 +41,8 @@
                            [[LinkedBook alloc] initWithImagePath:@"Images/EvilByDesign.jpg" amazonURL:@"http://www.amazon.co.uk/dp/1118422147/"],
                            [[LinkedBook alloc] initWithImagePath:@"Images/97Things.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0596809484/"],
                            [[LinkedBook alloc] initWithImagePath:@"Images/DesignPatterns.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0201633612/"],
-                           [[LinkedBook alloc] initWithImagePath:@"Images/HeadfirstDesign.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0596007124/"],
-                           [[LinkedBook alloc] initWithImagePath:@"Images/ShowMeTheNumbers.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0970601972/"]
+                           //[[LinkedBook alloc] initWithImagePath:@"Images/HeadfirstDesign.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0596007124/"],
+                           //[[LinkedBook alloc] initWithImagePath:@"Images/ShowMeTheNumbers.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0970601972/"]
                            ];
         
         //Position all the books
