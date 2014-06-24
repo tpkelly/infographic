@@ -20,7 +20,7 @@
 
 - (id)init
 {
-    self = [super initWithFrame:CGRectMake(0, 0, 1024, 400)];
+    self = [super initWithFrame:CGRectMake(0, 0, 1024, 450)];
     if (self) {
         //Set up Cumulative chart
         CumulativeChart *cumulativeChart = [[CumulativeChart alloc] initWithFrame:CGRectMake(10, 10, 700, 400)];
@@ -31,6 +31,7 @@
         
         //Add describing textview
         UITextView *cumulativeText = [[UITextView alloc] initWithFrame:CGRectMake(600, 150, 400, 150)];
+        cumulativeText.backgroundColor = [UIColor clearColor];
         cumulativeText.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
         cumulativeText.text = @"For the past 10 years, I have worked for over 13,000 hours at software development, with 3 years of real industry experience. "
         "I have experienced many methodologies and processes outside of day-to-day coding, "

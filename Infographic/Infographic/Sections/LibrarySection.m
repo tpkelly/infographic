@@ -13,7 +13,7 @@
 
 - (id)init
 {
-    self = [super initWithFrame:CGRectMake(0, 0, 1024, 430)];
+    self = [super initWithFrame:CGRectMake(0, 0, 1024, 500)];
     if (self) {
         NSArray *books = @[[[LinkedBook alloc] initWithImagePath:@"Images/MythicalManMonth.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0201835959/"],
                            [[LinkedBook alloc] initWithImagePath:@"Images/Peopleware.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0932633056/"],
@@ -27,7 +27,7 @@
                            [[LinkedBook alloc] initWithImagePath:@"Images/ShowMeTheNumbers.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0970601972/"]
                            ];
         CGFloat xPosition = 102;
-        CGFloat yPosition = 10;
+        CGFloat yPosition = 50;
         for (UIView *book in books)
         {
             if (xPosition + CGRectGetWidth(book.frame) > self.bounds.size.width)

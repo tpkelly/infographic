@@ -7,6 +7,7 @@
 //
 
 #import "CumulativeChart.h"
+#import "UIColor+InfoHex.h"
 
 @implementation CumulativeChart
 
@@ -20,6 +21,8 @@
         self.yAxis.title = @"Cumulative Hours";
         self.legend.hidden = NO;
         self.xAxis.majorTickFrequency = [SChartDateFrequency dateFrequencyWithYear:1];
+        self.xAxis.style.majorTickStyle.labelColor = [UIColor colorWithHex:@"545454" alpha:1];
+        self.yAxis.style.majorTickStyle.labelColor = [UIColor colorWithHex:@"545454" alpha:1];
     }
     return self;
 }

@@ -15,6 +15,7 @@
 		477F03F71959B76A004A5A15 /* StackedSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 477F03F61959B76A004A5A15 /* StackedSection.m */; };
 		477F03FA1959B86B004A5A15 /* LibrarySection.m in Sources */ = {isa = PBXBuildFile; fileRef = 477F03F91959B86B004A5A15 /* LibrarySection.m */; };
 		477F03FD1959BA2B004A5A15 /* ContributionSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 477F03FC1959BA2B004A5A15 /* ContributionSection.m */; };
+		477F04001959D93C004A5A15 /* UIColor+InfoHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 477F03FF1959D93C004A5A15 /* UIColor+InfoHex.m */; };
 		47B10431195817A5002C66FF /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B10430195817A5002C66FF /* ShinobiCharts.framework */; };
 		47B104381958182C002C66FF /* CumulativeDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B104371958182C002C66FF /* CumulativeDatasource.m */; };
 		47B1043B19581865002C66FF /* StackedDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B1043A19581865002C66FF /* StackedDatasource.m */; };
@@ -48,6 +49,8 @@
 		477F03F91959B86B004A5A15 /* LibrarySection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibrarySection.m; sourceTree = "<group>"; };
 		477F03FB1959BA2B004A5A15 /* ContributionSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContributionSection.h; sourceTree = "<group>"; };
 		477F03FC1959BA2B004A5A15 /* ContributionSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContributionSection.m; sourceTree = "<group>"; };
+		477F03FE1959D93C004A5A15 /* UIColor+InfoHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+InfoHex.h"; sourceTree = "<group>"; };
+		477F03FF1959D93C004A5A15 /* UIColor+InfoHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+InfoHex.m"; sourceTree = "<group>"; };
 		47B10430195817A5002C66FF /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiCharts.framework; path = Library/Frameworks/ShinobiCharts.framework; sourceTree = DEVELOPER_DIR; };
 		47B10434195817E3002C66FF /* CumulativeDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CumulativeDatasource.h; sourceTree = "<group>"; };
 		47B104371958182C002C66FF /* CumulativeDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CumulativeDatasource.m; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 				477F03E619597FC7004A5A15 /* CaptionedBubble.m */,
 				477F03EB1959AB37004A5A15 /* LinkedBook.h */,
 				477F03EC1959AB37004A5A15 /* LinkedBook.m */,
+				477F03FE1959D93C004A5A15 /* UIColor+InfoHex.h */,
+				477F03FF1959D93C004A5A15 /* UIColor+InfoHex.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				477F03E719597FC7004A5A15 /* CaptionedBubble.m in Sources */,
+				477F04001959D93C004A5A15 /* UIColor+InfoHex.m in Sources */,
 				47D68CCC1958162A00A3C8F5 /* ViewController.m in Sources */,
 				477F03F11959B5AF004A5A15 /* CumulativeSection.m in Sources */,
 				477F03F41959B6E6004A5A15 /* SplitSection.m in Sources */,

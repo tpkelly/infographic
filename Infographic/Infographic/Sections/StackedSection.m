@@ -20,7 +20,7 @@
 
 - (id)init
 {
-    self = [super initWithFrame:CGRectMake(0, 0, 1024, 400)];
+    self = [super initWithFrame:CGRectMake(0, 0, 1024, 450)];
     if (self) {
         //Set up Stacked chart
         StackedChart *stackedChart = [[StackedChart alloc] initWithFrame:CGRectMake(400, 10, 600, 400)];
@@ -31,6 +31,7 @@
         
         //Add describing textview
         UITextView *stackedText = [[UITextView alloc] initWithFrame:CGRectMake(50, 125, 350, 200)];
+        stackedText.backgroundColor = [UIColor clearColor];
         stackedText.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
         stackedText.text = @"The past decade has given me a wide range of experience across many different languages.\n\n"
                             "This primarily focused on Objective-C and Java, but includes other languages (grey columns) such as:\n"

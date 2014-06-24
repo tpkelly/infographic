@@ -14,6 +14,8 @@
 #import "ContributionSection.h"
 #import "LibrarySection.h"
 
+#import "UIColor+InfoHex.h"
+
 @implementation ViewController
 
 -(void)viewDidLoad
@@ -22,24 +24,26 @@
     
     self.titleLabel.text = @"Test my title";
 
-    NSArray *sections = @[[CumulativeSection new], [SplitSection new], [StackedSection new], [LibrarySection new], [ContributionSection new]];
+    NSArray *sections = @[[CumulativeSection new],
+                          [SplitSection new],
+                          [StackedSection new],
+                          [LibrarySection new],
+                          [ContributionSection new]];
     
-    for (UIView *section in sections)
+    NSArray *colours = @[[UIColor colorWithHex:@"66c2a5" alpha:1],
+                         [UIColor colorWithHex:@"fc8d62" alpha:1],
+                         [UIColor colorWithHex:@"8da0cb" alpha:1],
+                         [UIColor colorWithHex:@"e78ac3" alpha:1],
+                         [UIColor colorWithHex:@"a6d854" alpha:1],
+                         [UIColor colorWithHex:@"ffd92f" alpha:1]
+                         ];
+    
+    for (int i = 0; i < sections.count; i++)
     {
+        UIView *section = sections[i];
+        section.backgroundColor = colours[i];
         [self addSection:section];
     }
-}
-
--(void)addDivider
-{
-    CGFloat boundWidth = 1024;
-    CGFloat dividerPadding = 50;
-    UIView *divider = [[UIView alloc] initWithFrame:CGRectMake(boundWidth * 0.35, self.scrollview.contentSize.height + dividerPadding, boundWidth * 0.3, 1)];
-    divider.backgroundColor = [UIColor lightGrayColor];
-    [self.scrollview addSubview:divider];
-
-    //Resize to be closely fitting
-    self.scrollview.contentSize = CGSizeMake(CGRectGetMaxX(self.view.bounds), CGRectGetMaxY(divider.frame) + dividerPadding);
 }
 
 -(void)addSection:(UIView*)section
@@ -49,9 +53,6 @@
     
     //Resize scrollview to be closely fitting;
     self.scrollview.contentSize = CGSizeMake(CGRectGetWidth(self.view.bounds), CGRectGetMaxY(section.frame));
-
-    //Add leading divider
-    [self addDivider];
 }
 
 @end
