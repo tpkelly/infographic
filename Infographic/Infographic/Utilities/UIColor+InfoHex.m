@@ -3,7 +3,7 @@
 //  Infographic
 //
 //  Created by Thomas Kelly on 24/06/2014.
-//  Copyright (c) 2014 Scott Logic. All rights reserved.
+//  Copyright (c) 2014 TKGames. All rights reserved.
 //  Found this on http://www.pixeldock.com/blog/uicolorcolorwithhex-a-category-to-get-an-uicolor-from-a-hex-value-or-a-hex-string/
 //
 
