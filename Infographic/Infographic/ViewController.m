@@ -89,10 +89,7 @@
     [self.scrollview addSubview:vertical];
     
     //Add left title
-    UILabel *leftTitle = [UILabel new];
-    leftTitle.font = [UIFont fontWithName:@"HelveticaNeue" size:24];
-    leftTitle.text = @"ScottLogic / ShinobiControls";
-    [leftTitle sizeToFit];
+    UIImageView *leftTitle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Images/ShinobiControls.png"]];
     leftTitle.center = CGPointMake(256, CGRectGetMinY(vertical.frame));
     [self.scrollview addSubview:leftTitle];
     
@@ -111,15 +108,12 @@
     [self.scrollview addSubview:leftText];
     
     //Add right title
-    UILabel *rightTitle = [UILabel new];
-    rightTitle.font = [UIFont fontWithName:@"HelveticaNeue" size:24];
-    rightTitle.text = @"Reciva";
-    [rightTitle sizeToFit];
+    UIImageView *rightTitle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Images/Reciva.gif"]];
     rightTitle.center = CGPointMake(768, CGRectGetMinY(vertical.frame));
     [self.scrollview addSubview:rightTitle];
     
     //Add right text
-    UITextView *rightText = [[UITextView alloc] initWithFrame:CGRectMake(572, self.scrollview.contentSize.height + 75, 412, 200)];
+    UITextView *rightText = [[UITextView alloc] initWithFrame:CGRectMake(572, self.scrollview.contentSize.height + 125, 412, 75)];
     rightText.font = [UIFont fontWithName:@"HelveticaNeue" size:16];
 	rightText.text = @"\u2022 Client-side development of integrated device software.\n"
 	                  "\u2022 Development of device drivers and features.\n"
