@@ -13,8 +13,25 @@
 
 - (id)init
 {
-    self = [super initWithFrame:CGRectMake(0, 0, 1024, 500)];
+    self = [super initWithFrame:CGRectMake(0, 0, 1024, 750)];
     if (self) {
+        
+        //Library title
+        UILabel *libraryTitle = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 280, 50)];
+        libraryTitle.backgroundColor = [UIColor clearColor];
+        libraryTitle.font = [UIFont fontWithName:@"HelveticaNeue" size:20];
+        libraryTitle.textAlignment = NSTextAlignmentCenter;
+        libraryTitle.text = @"Personal Library";
+        [self addSubview:libraryTitle];
+        
+        //Add some descriptive text
+        UITextView *libraryDescription = [[UITextView alloc] initWithFrame:CGRectMake(10, 110, 280, 500)];
+        libraryDescription.backgroundColor = [UIColor clearColor];
+        libraryDescription.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
+        libraryDescription.text = @"My personal library of books";
+        [self addSubview:libraryDescription];
+        
+        //Add the book images, with links
         NSArray *books = @[[[LinkedBook alloc] initWithImagePath:@"Images/MythicalManMonth.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0201835959/"],
                            [[LinkedBook alloc] initWithImagePath:@"Images/Peopleware.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0932633056/"],
                            [[LinkedBook alloc] initWithImagePath:@"Images/PragmaticProgrammer.jpg" amazonURL:@"http://www.amazon.co.uk/dp/020161622X/"],
@@ -26,14 +43,17 @@
                            [[LinkedBook alloc] initWithImagePath:@"Images/HeadfirstDesign.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0596007124/"],
                            [[LinkedBook alloc] initWithImagePath:@"Images/ShowMeTheNumbers.jpg" amazonURL:@"http://www.amazon.co.uk/dp/0970601972/"]
                            ];
-        CGFloat xPosition = 102;
+        
+        //Position all the books
+        CGFloat initialX = 300;
+        CGFloat xPosition = initialX;
         CGFloat yPosition = 50;
         for (UIView *book in books)
         {
             if (xPosition + CGRectGetWidth(book.frame) > self.bounds.size.width)
             {
                 yPosition += CGRectGetHeight(book.frame) + 30;
-                xPosition = 102;
+                xPosition = initialX;
             }
             
             book.layer.borderWidth = 1;
