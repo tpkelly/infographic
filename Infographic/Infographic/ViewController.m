@@ -28,8 +28,8 @@
     NSArray *sections = @[[CumulativeSection new],
                           [SplitSection new],
                           [StackedSection new],
-                          [LibrarySection new],
                           [ContributionSection new],
+                          [LibrarySection new],
                           [HobbiesSection new]];
     
     NSArray *colours = @[[UIColor colorWithHex:@"66c2a5" alpha:1],
