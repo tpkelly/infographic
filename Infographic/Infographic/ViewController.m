@@ -13,6 +13,7 @@
 #import "StackedSection.h"
 #import "ContributionSection.h"
 #import "LibrarySection.h"
+#import "HobbiesSection.h"
 
 #import "UIColor+InfoHex.h"
 
@@ -28,7 +29,8 @@
                           [SplitSection new],
                           [StackedSection new],
                           [LibrarySection new],
-                          [ContributionSection new]];
+                          [ContributionSection new],
+                          [HobbiesSection new]];
     
     NSArray *colours = @[[UIColor colorWithHex:@"66c2a5" alpha:1],
                          [UIColor colorWithHex:@"fc8d62" alpha:1],

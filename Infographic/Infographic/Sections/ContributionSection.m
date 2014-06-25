@@ -15,6 +15,7 @@
 {
     self = [super initWithFrame:CGRectMake(0, 0, 1024, 250)];
     if (self) {
+        //Add overview
         UILabel *overviewLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 20, 400, 50)];
         overviewLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:16];
         overviewLabel.text = @"Besides code on ShinobiControls, I also contributed...";
