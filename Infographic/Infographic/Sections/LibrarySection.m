@@ -19,7 +19,7 @@
         //Library title
         UILabel *libraryTitle = [[UILabel alloc] initWithFrame:CGRectMake(50, 150, 280, 50)];
         libraryTitle.backgroundColor = [UIColor clearColor];
-        libraryTitle.font = [UIFont fontWithName:@"HelveticaNeue" size:20];
+        libraryTitle.font = [UIFont fontWithName:@"AmericanTypewriter" size:20];
         libraryTitle.textAlignment = NSTextAlignmentCenter;
         libraryTitle.text = @"Personal Library";
         [self addSubview:libraryTitle];

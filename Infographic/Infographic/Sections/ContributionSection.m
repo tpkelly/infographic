@@ -17,8 +17,8 @@
     if (self) {
         //Add overview
         UILabel *overviewLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 20, 400, 50)];
-        overviewLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:16];
-        overviewLabel.text = @"Besides code on ShinobiControls, I also contributed...";
+        overviewLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:20];
+        overviewLabel.text = @"Contributions to ShinobiControls";
         [self addSubview:overviewLabel];
         
         //Add twitter button

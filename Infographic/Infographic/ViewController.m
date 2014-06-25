@@ -27,21 +27,19 @@
     self.contactLabel.text = @"07557 102412\n"
                               "kazenone@gmail.com";
 
-    NSArray *sections = @[[CumulativeSection new],
+    NSArray *sections = @[[StackedSection new],
                           [SplitSection new],
-                          [StackedSection new],
                           [ContributionSection new],
                           [LibrarySection new],
                           [HobbiesSection new]];
     
-    NSArray *colours = @[[UIColor colorWithHex:@"66c2a5" alpha:1],
-                         [UIColor colorWithHex:@"fc8d62" alpha:1],
-                         [UIColor colorWithHex:@"8da0cb" alpha:1],
-                         [UIColor colorWithHex:@"e78ac3" alpha:1],
-                         [UIColor colorWithHex:@"a6d854" alpha:1],
-                         [UIColor colorWithHex:@"ffd92f" alpha:1]
+    NSArray *colours = @[[UIColor colorWithHex:@"bae4bc" alpha:1],
+                         [UIColor colorWithHex:@"7bccc4" alpha:1],
+                         [UIColor colorWithHex:@"43a2ca" alpha:1],
                          ];
-    
+	// Match the theming on our title
+    self.titleLabel.backgroundColor = [colours lastObject];
+	
     for (int i = 0; i < sections.count; i++)
     {
         UIView *section = sections[i];

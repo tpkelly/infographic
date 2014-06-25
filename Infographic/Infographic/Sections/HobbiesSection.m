@@ -17,8 +17,8 @@
     if (self) {
         //Add overview
         UILabel *overviewLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 20, 400, 50)];
-        overviewLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:16];
-        overviewLabel.text = @"Outside of work, I also...";
+        overviewLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:20];
+        overviewLabel.text = @"Outside of work";
         [self addSubview:overviewLabel];
         
         //Add BASS button
