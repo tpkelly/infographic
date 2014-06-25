@@ -23,7 +23,8 @@
 {
     [super viewDidLoad];
     
-    self.titleLabel.text = @"Test my title";
+    self.titleLabel.text = @"Why Interview me?";
+    self.titleLabel.backgroundColor = [UIColor colorWithHex:@"A4E596" alpha:1];
 
     NSArray *sections = @[[CumulativeSection new],
                           [SplitSection new],
@@ -43,7 +44,7 @@
     for (int i = 0; i < sections.count; i++)
     {
         UIView *section = sections[i];
-        section.backgroundColor = colours[i];
+        section.backgroundColor = colours[i % colours.count];
         [self addSection:section];
     }
 }
