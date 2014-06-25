@@ -22,22 +22,22 @@
         [self addSubview:overviewLabel];
         
         //Add BASS button
-        UIView *animeBubble = [CaptionedBubble bubbleWithImagePath:@"Images/ForumPosts.png" caption:@"Organise a weekly anime group\n(since Jan 2012)"];
+        UIView *animeBubble = [CaptionedBubble bubbleWithImagePath:@"Images/BASS.png" caption:@"Organise a weekly anime group\n(since Jan 2012)"];
         animeBubble.center = CGPointMake(204, 165);
         [self addSubview:animeBubble];
 
         //Add music button
-        UIView *musicBubble = [CaptionedBubble bubbleWithImagePath:@"Images/ForumPosts.png" caption:@"Play Flute and Piano"];
+        UIView *musicBubble = [CaptionedBubble bubbleWithImagePath:@"Images/Note.png" caption:@"Play Flute and Piano"];
         musicBubble.center = CGPointMake(409, 165);
         [self addSubview:musicBubble];
         
         //Add cosplay button
-        UIView *cosplayBubble = [CaptionedBubble bubbleWithImagePath:@"Images/ForumPosts.png" caption:@"Make and wear cosplays"];
+        UIView *cosplayBubble = [CaptionedBubble bubbleWithImagePath:@"Images/Sewing.png" caption:@"Make and wear cosplays"];
         cosplayBubble.center = CGPointMake(614, 165);
         [self addSubview:cosplayBubble];
         
         //Add games button
-        UIView *gamesBubble = [CaptionedBubble bubbleWithImagePath:@"Images/ForumPosts.png" caption:@"Play lots of video games.\nCurrently writing a book\non Gamification"];
+        UIView *gamesBubble = [CaptionedBubble bubbleWithImagePath:@"Images/Controller.png" caption:@"Play lots of video games.\nCurrently writing a book\non Gamification"];
         gamesBubble.center = CGPointMake(820, 165);
         [self addSubview:gamesBubble];
     }
