@@ -21,6 +21,7 @@
         
         //Add left text
         UITextView *leftText = [[UITextView alloc] initWithFrame:CGRectMake(50, 75, 462, 200)];
+        leftText.userInteractionEnabled = NO;
         leftText.backgroundColor = [UIColor clearColor];
         leftText.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
         leftText.text = @"\u2022 iOS component development across entire product range.\n"
@@ -42,6 +43,7 @@
         
         //Add right text
         UITextView *rightText = [[UITextView alloc] initWithFrame:CGRectMake(572, 125, 412, 75)];
+        rightText.userInteractionEnabled = NO;
         rightText.backgroundColor = [UIColor clearColor];
         rightText.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
         rightText.text = @"\u2022 Client-side development of integrated device software.\n"

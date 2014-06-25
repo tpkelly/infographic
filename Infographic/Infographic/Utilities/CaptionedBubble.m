@@ -28,6 +28,7 @@
     
     //Add caption
     UITextView *captionView = [[UITextView alloc] initWithFrame:CGRectMake(0, 110, 200, 80)];
+    captionView.userInteractionEnabled = NO;
     captionView.backgroundColor = [UIColor clearColor];
     captionView.text = caption;
     captionView.textAlignment = NSTextAlignmentCenter;

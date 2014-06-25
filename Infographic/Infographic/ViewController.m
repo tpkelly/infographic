@@ -23,8 +23,9 @@
 {
     [super viewDidLoad];
     
-    self.titleLabel.text = @"Why Interview me?";
-    self.titleLabel.backgroundColor = [UIColor colorWithHex:@"A4E596" alpha:1];
+    self.titleLabel.text = @"Thomas Kelly";
+    self.contactLabel.text = @"07557 102412\n"
+                              "kazenone@gmail.com";
 
     NSArray *sections = @[[CumulativeSection new],
                           [SplitSection new],

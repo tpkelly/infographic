@@ -31,6 +31,7 @@
         
         //Add describing textview
         UITextView *cumulativeText = [[UITextView alloc] initWithFrame:CGRectMake(600, 150, 400, 150)];
+        cumulativeText.userInteractionEnabled = NO;
         cumulativeText.backgroundColor = [UIColor clearColor];
         cumulativeText.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
         cumulativeText.text = @"For the past 10 years, I have worked for over 13,000 hours at software development, with 3 years of real industry experience. "

@@ -26,6 +26,7 @@
         
         //Add some descriptive text
         UITextView *libraryDescription = [[UITextView alloc] initWithFrame:CGRectMake(50, 210, 280, 500)];
+        libraryDescription.userInteractionEnabled = NO;
         libraryDescription.backgroundColor = [UIColor clearColor];
         libraryDescription.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
         libraryDescription.text = @"During my time at Reciva and ShinobiControls, I have built up a sizable reading list. These books are a selection of some I have read and recommended to others.\n\n"
