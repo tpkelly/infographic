@@ -30,12 +30,13 @@
         "\u2022 Marketting Comms copy-reviewer.\n"
         "\u2022 Continual presence on the office library book orders.\n"
         "\u2022 Blogger.\n"
+        "\u2022 Interviewer.\n"
         "\u2022 Maintainer of the Continuous Integration server.\n"
         "\u2022 Participant in numerous study groups.";
         [self addSubview:leftText];
         
         //Add right title
-        UIImageView *rightTitle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Images/Reciva.gif"]];
+        UIImageView *rightTitle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Images/Reciva.png"]];
         rightTitle.center = CGPointMake(768, 50);
         [self addSubview:rightTitle];
         

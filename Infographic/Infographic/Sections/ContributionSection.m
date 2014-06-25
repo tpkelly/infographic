@@ -23,18 +23,23 @@
         
         //Add twitter button
         UIView *twitterBubble = [CaptionedBubble bubbleWithImagePath:@"Images/Twitter.png" caption:@"500+ social media posts"];
-        twitterBubble.center = CGPointMake(256, 170);
+        twitterBubble.center = CGPointMake(204, 170);
         [self addSubview:twitterBubble];
         
-        //Add twitter button
+        //Add forum button
         UIView *forumBubble = [CaptionedBubble bubbleWithImagePath:@"Images/ForumPosts.png" caption:@"100+ forum posts"];
-        forumBubble.center = CGPointMake(512, 170);
+        forumBubble.center = CGPointMake(409, 170);
         [self addSubview:forumBubble];
         
-        //Add twitter button
+        //Add blog button
         UIView *blogBubble = [CaptionedBubble bubbleWithImagePath:@"Images/Blogs.png" caption:@"5 tutorial blog posts"];
-        blogBubble.center = CGPointMake(768, 170);
+        blogBubble.center = CGPointMake(614, 170);
         [self addSubview:blogBubble];
+        
+        //Add interview button
+        UIView *interviewBubble = [CaptionedBubble bubbleWithImagePath:@"Images/Questions.png" caption:@"3 new interview questions"];
+        interviewBubble.center = CGPointMake(820, 170);
+        [self addSubview:interviewBubble];
     }
     return self;
 }
