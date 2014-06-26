@@ -16,11 +16,11 @@
     if (self) {
         //Add left title
         UIImageView *leftTitle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Images/ShinobiControls.png"]];
-        leftTitle.center = CGPointMake(256, 50);
+        leftTitle.center = CGPointMake(256, 30);
         [self addSubview:leftTitle];
 		
 		//Add left year
-		UILabel *leftYear = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 512, 40)];
+		UILabel *leftYear = [[UILabel alloc] initWithFrame:CGRectMake(0, 250, 512, 40)];
 		leftYear.backgroundColor = [UIColor clearColor];
 		leftYear.text = @"Aug 2012 - Present";
 		leftYear.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
@@ -28,7 +28,7 @@
 		[self addSubview:leftYear];
         
         //Add left text
-        UITextView *leftText = [[UITextView alloc] initWithFrame:CGRectMake(50, 75, 462, 200)];
+        UITextView *leftText = [[UITextView alloc] initWithFrame:CGRectMake(50, 50, 462, 200)];
         leftText.userInteractionEnabled = NO;
         leftText.backgroundColor = [UIColor clearColor];
         leftText.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
@@ -50,7 +50,7 @@
         [self addSubview:rightTitle];
 		
 		//Add right year
-		UILabel *rightYear = [[UILabel alloc] initWithFrame:CGRectMake(512, 50, 512, 40)];
+		UILabel *rightYear = [[UILabel alloc] initWithFrame:CGRectMake(512, 250, 512, 40)];
 		rightYear.backgroundColor = [UIColor clearColor];
 		rightYear.text = @"Aug 2010 - Sep 2011";
 		rightYear.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
@@ -58,7 +58,7 @@
 		[self addSubview:rightYear];
         
         //Add right text
-        UITextView *rightText = [[UITextView alloc] initWithFrame:CGRectMake(572, 125, 412, 75)];
+        UITextView *rightText = [[UITextView alloc] initWithFrame:CGRectMake(572, 100, 412, 75)];
         rightText.userInteractionEnabled = NO;
         rightText.backgroundColor = [UIColor clearColor];
         rightText.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
