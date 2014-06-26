@@ -20,7 +20,7 @@
         [self addSubview:leftTitle];
 		
 		//Add left year
-		UILabel *leftYear = [[UILabel alloc] initWithFrame:CGRectMake(0, 75, 512, 40)];
+		UILabel *leftYear = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 512, 40)];
 		leftYear.backgroundColor = [UIColor clearColor];
 		leftYear.text = @"Aug 2012 - Present";
 		leftYear.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];
@@ -46,11 +46,11 @@
         
         //Add right title
         UIImageView *rightTitle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Images/Reciva.png"]];
-        rightTitle.center = CGPointMake(768, 50);
+        rightTitle.center = CGPointMake(768, 30);
         [self addSubview:rightTitle];
 		
 		//Add right year
-		UILabel *rightYear = [[UILabel alloc] initWithFrame:CGRectMake(512, 75, 512, 40)];
+		UILabel *rightYear = [[UILabel alloc] initWithFrame:CGRectMake(512, 50, 512, 40)];
 		rightYear.backgroundColor = [UIColor clearColor];
 		rightYear.text = @"Aug 2010 - Sep 2011";
 		rightYear.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:16];

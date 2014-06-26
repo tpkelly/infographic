@@ -33,13 +33,9 @@
                           [LibrarySection new],
                           [HobbiesSection new]];
     
-    NSArray *colours = @[[UIColor colorWithHex:@"bae4bc" alpha:1],
-                         [UIColor colorWithHex:@"7bccc4" alpha:1],
-                         [UIColor colorWithHex:@"43a2ca" alpha:1],
+    NSArray *colours = @[[UIColor colorWithHex:@"deebf7" alpha:1],
+                         [UIColor colorWithHex:@"9ecae1" alpha:1],
                          ];
-	// Match the theming on our title
-    self.titleLabel.backgroundColor = [colours lastObject];
-	
     for (int i = 0; i < sections.count; i++)
     {
         UIView *section = sections[i];
