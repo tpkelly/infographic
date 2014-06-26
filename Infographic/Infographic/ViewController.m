@@ -36,6 +36,9 @@
     NSArray *colours = @[[UIColor colorWithHex:@"deebf7" alpha:1],
                          [UIColor colorWithHex:@"9ecae1" alpha:1],
                          ];
+    
+    self.view.backgroundColor = [colours firstObject];
+    
     for (int i = 0; i < sections.count; i++)
     {
         UIView *section = sections[i];
@@ -49,8 +52,13 @@
     section.frame = CGRectOffset(section.frame, 0, self.scrollview.contentSize.height);
     [self.scrollview addSubview:section];
     
+    //Add divider between sections
+    UIView *divider = [[UIView alloc] initWithFrame:CGRectMake(384, CGRectGetMaxY(section.frame), 256, 1)];
+    divider.backgroundColor = [UIColor lightGrayColor];
+    [self.scrollview addSubview:divider];
+    
     //Resize scrollview to be closely fitting;
-    self.scrollview.contentSize = CGSizeMake(CGRectGetWidth(self.view.bounds), CGRectGetMaxY(section.frame));
+    self.scrollview.contentSize = CGSizeMake(CGRectGetWidth(self.view.bounds), CGRectGetMaxY(divider.frame));
 }
 
 @end
